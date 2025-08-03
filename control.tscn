@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://caodovqju00pp"]
+
+[ext_resource type="Script" uid="uid://djw3kecut8wmt" path="res://IO.cs" id="1_0fbet"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0fbet")
+
+[node name="SaveButton" type="Button" parent="."]
+layout_mode = 0
+offset_right = 388.0
+offset_bottom = 149.0
+text = "Save"
+
+[node name="LoadButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 764.0
+offset_top = 3.0
+offset_right = 1152.0
+offset_bottom = 152.0
+text = "Load"
+
+[connection signal="pressed" from="SaveButton" to="." method="OnSaveButtonPressed"]
+[connection signal="pressed" from="LoadButton" to="." method="OnButtonPressed"]
